@@ -1,0 +1,21 @@
+<view wx:for='{{data}}' class='content'>
+  <view class='title-item'>
+    <view>
+      {{item.teamNameA}} {{item.bigScoreA}} : {{item.bigScoreB}} {{item.teamNameB}}
+    </view>
+    <text>{{item.time}}</text>
+  </view>
+  <view wx:for='{{item.process}}' wx:key='{{item.id}}' class='data-module'>
+    <view wx:if='{{item.isRed}}' class='module-left'>
+      <view class='item-left'>{{item.id}} {{item.type}}
+        <text>{{item.time}}</text>
+      </view>
+      <span class="triangle"></span>
+    </view>
+    <view wx:else class='module-right'>
+      <span class="triangle"></span>
+      <view class='item-right'>
+        <text>{{item.time}}</text> {{item.id}} {{item.type}}</view>
+    </view>
+  </view>
+</view>

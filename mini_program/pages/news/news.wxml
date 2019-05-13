@@ -1,0 +1,20 @@
+<view class='outter'>
+  <view wx:if="{{isHave}}" class='news-title'>实时新闻
+    <view  wx:for="{{data}}" wx:key="item.title" class='news-group' bindtap='seeDetails' data-url="{{item.url}}" loading="" >
+      <view class='left-group'>
+        <image class='thumbnail' src='{{item.thumbnail_pic_s}}'></image>
+      </view>
+      <view class='right-group'>
+        <view class='title'>{{item.title}}</view>
+        <view class='date-author'>
+          <view class='date'>{{item.date}}</view>
+          <view class='author'>{{item.author_name}}</view>
+
+        </view>
+      </view>
+    </view>
+    
+  </view>
+  <view wx:else>超过今日访问次数</view>
+
+</view>

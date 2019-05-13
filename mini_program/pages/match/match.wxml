@@ -1,0 +1,10 @@
+<!-- <button bindtap = 'onInsert'>添加</button>
+<view>{{csid}}{{test}}</view>
+<button bindtap = 'onQuery'>查询</button>
+<view wx:for="{{data}}" wx:key='{{item._id}}'>{{item._id}}{{item.test}}</view>
+<button bindtap = 'onUpdate'>修改</button>
+<button bindtap = 'onRemove'>删除</button> -->
+
+<button bindtap='onUploadFile' class='uploadFile'>上传图片</button>
+
+<button bindtap='onAdd'>云函数加法</button>

@@ -1,0 +1,39 @@
+<view class='container'>
+
+  <navigator class='football ball' hover-class="none" bindtap='onFootballChick'>
+    <image src='/images/football.jpg'></image>
+    <view class='item-group'>
+      <view class='title'>足球</view>
+      <view class='details'>足球比赛数据记录工具，记录比分、进球、助攻、换人、红黄牌等</view>
+    </view>
+  </navigator>
+  <navigator class='basketball ball' hover-class="none" bindtap='onBasketballChick'>
+    <image src='/images/basketball.jpg'></image>
+    <view class='item-group'>
+      <view class='title'>篮球</view>
+      <view class='details'>篮球比赛数据记录工具,记录比分、进球、换人等</view>
+    </view>
+  </navigator>
+  <navigator class='volleyball ball' hover-class="none" bindtap='onVolleyballChick'>
+    <image src='/images/volleyball.jpg'></image>
+    <view class='item-group'>
+      <view class='title'>排球</view>
+      <view class='details'>排球比赛数据记录工具，记录比分、站位、换人等</view>
+    </view>
+  </navigator>
+  <navigator class='tennis ball' hover-class="none" bindtap='onTennisChick'>
+    <image src='/images/tennis.jpg'></image>
+    <view class='item-group'>
+      <view class='title'>网球</view>
+      <view class='details'>网球比赛数据记录工具，功能待完善</view>
+    </view>
+  </navigator>
+  <navigator class='pingpong ball' hover-class="none" bindtap='onPingpongChick'>
+    <image src='/images/pingpong.jpg'></image>
+    <view class='item-group'>
+      <view class='title'>乒乓球</view>
+      <view class='details'>乒乓球比赛数据记录工具，记录比分，功能待完善</view>
+    </view>
+  </navigator>
+
+</view>

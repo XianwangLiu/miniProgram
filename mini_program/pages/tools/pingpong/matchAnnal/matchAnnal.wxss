@@ -1,0 +1,58 @@
+/* pages/tools/pingpong/matchAnnal/matchAnnal.wxss */
+.content{
+  
+  height: 100%;
+}
+
+.component{
+  /* margin: 20rpx; */
+  border-radius: 1rpx;
+  /* padding: 20rpx; */
+  display: flex;
+  background-color: #eee;
+  justify-content: space-around;
+  flex-direction:column;
+}
+.title-item{
+  display: flex;
+  flex-direction: column;
+}
+.bigScore{
+  text-align: center;
+}
+.component-text{
+  text-align: center;
+  font-size: 30rpx;
+}
+.component-item{
+  
+} 
+.component-id{
+ display: flex;
+  justify-content: space-around;
+  border: 1px solid #fff;
+  padding: 20rpx;
+}
+.item-text{
+  font-weight: 500;
+  line-height: 80rpx;
+}
+
+.item-red{
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  line-height: 80rpx;
+}
+.item-blue{
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  line-height: 80rpx;
+}

@@ -1,0 +1,16 @@
+<!--pages/tools/pingpong/matchAnnal/matchAnnal.wxml-->
+<view class='content'>
+  <view wx:for='{{data}}' wx:key='{{item._id}}' class='component'>
+    <view wx:if='{{!item.hasWinner}}' class='component-item'>
+      <view class='component-id'>
+        <text class='item-red'>{{item.leftScore}}</text>
+        <view class='item-text'>第{{item.No}}局</view>
+        <text class='item-blue'>{{item.rightScore}}</text>
+      </view>
+    </view>
+    <view wx:if='{{item.hasWinner}}' class='title-item'>
+      <text class='component-text'>{{item.winner}}胜,时间：{{item.time}}</text>
+      <view class='bigScore'>{{item.leftBigScore}}:{{item.rightBigScore}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/tools/tools",
+    "pages/tools/football/footballTool",
+    "pages/tools/pingpong/matchAnnal/matchAnnal",
+    "pages/tools/pingpong/pingpongTool",
+    "pages/match/match",
+    "pages/user/user",
+    "pages/user/MyLike/MyLike",
+    "pages/user/MyCard/MyCard",
+    "pages/user/SignAll/SignAll",
+    "pages/user/Setting/Setting",
+    "pages/index/index",
+    "pages/news/news",
+    "pages/newsDetail/newsDetail",
+    "pages/tools/basketball/basketballTool",
+    "pages/tools/volleyball/volleyballTool",
+    "pages/tools/tennis/tennisTool",
+    "pages/match/matchDetails/matchDetails",
+    "pages/tools/football/matchAnnal/matchAnnal"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#41be57",
+    "navigationBarTitleText": "杭野联盟",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#1AAD16",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/user/user",
+        "text": "我",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/mySelect.png"
+      },
+      {
+        "pagePath": "pages/match/match",
+        "text": "赛事",
+        "iconPath": "images/match.png",
+        "selectedIconPath": "images/matchSelect.png"
+      },
+      {
+        "pagePath": "pages/tools/tools",
+        "text": "工具",
+        "iconPath": "images/tools.png",
+        "selectedIconPath": "images/toolsSelect.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "新闻",
+        "iconPath": "images/news.png",
+        "selectedIconPath": "images/newsSelect.png"
+      }
+    ]
+  }
+}

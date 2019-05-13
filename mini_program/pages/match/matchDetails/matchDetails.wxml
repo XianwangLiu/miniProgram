@@ -1,0 +1,9 @@
+
+<view>fileID:{{fileID}}</view>
+<view>云路径：{{cloudPath}}</view>
+<view>存储路径： {{filePath}}</view>
+<button bindtap='onDownloadFile'>下载图片</button>
+
+<button bindtap='onGetTempFileUrl'>获取链接</button>
+<view>临时链接：{{bTempFileURL}}</view>
+<button bindtap='onDeleteFile'>删除图片</button>

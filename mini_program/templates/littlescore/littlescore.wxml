@@ -1,0 +1,15 @@
+<template name="scoreTemplate">
+  <view class='scoreview'>
+    <!-- <text class='scoretext'>{{score}}</text> -->
+    <view class='cover-view'>
+      <text class='cover-up' hidden='{{false}}' catchtap='addButtonClick' data-type='{{isLeft}}'></text>
+      <text class='cover-down' hidden='{{false}}' bindtap='reduceButtonClick' data-text='{{score}}' data-type='{{isLeft}}'></text>
+    </view>
+
+    <view class='scoreAddAndReduce'>
+      <button class='add' bindtap='addButtonClick' data-text='{{score}}' data-type='{{isLeft}}'>+</button>
+      <button class='reduce' bindtap='reduceButtonClick' data-text='{{score}}' data-type='{{isLeft}}'>-</button>
+    </view>
+    <button class='reset' bindtap='resetButtonClick' data-type='{{isLeft}}'>重置分数</button>
+  </view>
+</template>

@@ -1,0 +1,4 @@
+/* pages/newsDetail/newsDetail.wxss */
+text {
+  word-wrap: break-word;
+}

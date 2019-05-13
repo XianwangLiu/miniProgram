@@ -1,0 +1,81 @@
+<!--pages/tools/football/footballTool.wxml-->
+
+<view class='content'>
+  <view class='title-group'>
+    <view class="section">
+      <view class='section-left'>
+        <input placeholder-style="color:#e73e3c" placeholder="请输入红色方" focus="{{focus}}" bindinput="getRedTeam" value="{{teamNameA}}" />
+      </view>
+      <view class='VS'>VS</view>
+      <view class='section-right'>
+        <input placeholder-style="color:#6a64f6" placeholder="请输入蓝色方" focus="{{focus}}" bindinput="getBlueTeam" value="{{teamNameB}}" />
+      </view>
+    </view>
+  </view>
+
+  <view class='big_score'>
+    <view class='score-left score'>{{bigScoreA}}</view>
+    <view class='score-right score'>{{bigScoreB}}</view>
+  </view>
+
+  <view class='time-group'>
+    <view class='timer'>时间： {{minutes}} : {{seconds}}</view>
+  </view>
+  <view class='teamCollection'>
+    <view class='redTeam'>
+      <view class='nameList'>
+        <picker bindchange="bindPickerChangePlayerA" value="{{indexA}}" range="{{teamRedPlayers}}">
+          <view class="picker">
+            当前选择的队员：{{teamRedPlayers[indexA]}}
+          </view>
+        </picker>
+        <picker bindchange="bindPickerChangeTypeA" value="{{indexB}}" range="{{type}}">
+          <view class="picker">
+            当前选择行为：{{type[typeIndexA]}}
+          </view>
+        </picker>
+        <button size='mini' bindtap="addActivityRed">添加进程</button>
+
+      </view>
+    </view>
+    <view class='blueTeam'>
+      <view class='nameList'>
+        <picker bindchange="bindPickerChangePlayerB" value="{{indexA}}" range="{{teamBluePlayers}}">
+          <view class="picker">
+            当前选择的队员：{{teamBluePlayers[indexB]}}
+          </view>
+        </picker>
+        <picker bindchange="bindPickerChangeTypeB" value="{{indexB}}" range="{{type}}">
+          <view class="picker">
+            当前选择行为：{{type[typeIndexB]}}
+          </view>
+        </picker>
+        <button size='mini' bindtap="addActivityBlue">添加进程</button>
+      </view>
+    </view>
+  </view>
+
+  <view style='text-align: center;'>时间轴</view>
+  <view wx:for='{{process}}' wx:key='{{item.id}}' class='data-module'>
+    <view wx:if='{{item.isRed}}' class='module-left'>
+      <view class='item-left'>{{item.id}} {{item.type}}
+        <text>{{item.time}}</text>
+      </view>
+      <span class="triangle"></span>
+    </view>
+    <view wx:else class='module-right'>
+      <span class="triangle"></span>
+      <view class='item-right'>
+        <text>{{item.time}}</text> {{item.id}} {{item.type}}</view>
+    </view>
+  </view>
+  <view class='button-group'>
+    <button size='mini' type='primary' class='button-item' bindtap='startGame'>比赛开始</button>
+    <button size='mini' type='primary' class='button-item' bindtap='onHalfGameOver'>上半场结束</button>
+    <button size='mini' type='primary' class='button-item' bindtap='onLastHalfStart'>下半场开始</button>
+    <button size='mini' type='primary' class='button-item' bindtap='onGameOver'>比赛结束</button>
+    <button size='mini' type='primary' class='button-item' bindtap='onMatchAnnal'>比赛记录</button>
+    <button size='mini' type='primary' class='button-item' bindtap='onRegame'>重置</button>
+  </view>
+
+</view>

@@ -1,0 +1,38 @@
+<view class="Top">
+  <view class='userpic'>
+    <open-data class="open-data-userAvatarUrl" type="userAvatarUrl"></open-data>
+  </view>
+
+  <!-- <view class='nickName'>
+    <open-data class="open-data-userNickName line1" type="userNickName" lang="zh_CN"></open-data>
+  </view> -->
+  <view class='nickName'>hello {{userInfo.nickName}}</view>
+
+  <!-- 需要使用 button 来授权登录 -->
+  <view wx:if='{{showOrHidden}}'>
+    <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+      授权登录
+    </button>
+    <view wx:else>请升级微信版本</view>
+  </view>
+</view>
+
+<view class="card" bindtap='bindViewTapMyCard'>
+  <image class="pic" mode="scaletofill" src='https://www.xianwangliu.cn/miniProgram/images/myCard.png'></image>
+  <view class="title">我的运动卡片</view>
+</view>
+
+<view class="card" bindtap='bindViewTapMyLike'>
+  <image class="pic" src='https://www.xianwangliu.cn/miniProgram/images/myLike.png'></image>
+  <view class="title">我的关注</view>
+</view>
+
+<view class="card" bindtap='bindViewTapSignAll'>
+  <image class="pic" src='https://www.xianwangliu.cn/miniProgram/images/mySign.png'></image>
+  <view class="title">一键签到</view>
+</view>
+
+<view class="card" bindtap='Setting'>
+  <image class="pic" src='https://www.xianwangliu.cn/miniProgram/images/mySetting.png'></image>
+  <view class="title">反馈·合作</view>
+</view>
