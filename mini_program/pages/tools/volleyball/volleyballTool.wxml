@@ -1,2 +1,10 @@
-<!--pages/tools/volleyball/volleyballTool.wxml-->
-<text>pages/tools/volleyball/volleyballTool.wxml</text>
+<view class='container'>
+
+  <navigator class='football ball' hover-class="none" bindtap='onFootballChick'>
+    <image src='/images/matchwin.jpg'></image>
+    <view class='item-group'>
+      <view class='title'>点击进入赛事窗</view>
+      <view class='details'>赛事窗，专业记录排球数据</view>
+    </view>
+  </navigator>
+</view>

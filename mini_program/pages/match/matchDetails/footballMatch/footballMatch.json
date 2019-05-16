@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "register": "/components/register/register",
+    "match": "/components/match/match"
+  },
+  "navigationBarTitleText": "赛事详情"
+}

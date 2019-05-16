@@ -26,10 +26,18 @@ Page({
     this.setData({
       teamNameA: e.detail.value
     })
+    wx.setStorage({
+      key: 'teamNameA',
+      data: this.data.teamNameA
+    })
   },
   getBlueTeam: function(e) {
     this.setData({
       teamNameB: e.detail.value
+    });
+    wx.setStorage({
+      key: 'teamNameB',
+      data: this.data.teamNameB
     })
   },
   initativeTap: function(event) {
@@ -71,7 +79,10 @@ Page({
       this.setData({
         leftScore: score
       });
-
+      wx.setStorage({
+        key: 'leftScore',
+        data: this.data.leftScore
+      })
     }
   },
   reduceLeftButtonClick: function(event) {
@@ -84,6 +95,10 @@ Page({
       this.setData({
         leftScore: score
       });
+      wx.setStorage({
+        key: 'leftScore',
+        data: this.data.leftScore
+      })
     }
   },
   addRightButtonClick: function(event) {
@@ -95,7 +110,10 @@ Page({
       this.setData({
         rightScore: score
       });
-
+      wx.setStorage({
+        key: 'rightScore',
+        data: this.data.rightScore
+      })
     }
   },
   reduceRightButtonClick: function(event) {
@@ -108,6 +126,10 @@ Page({
       this.setData({
         rightScore: score
       });
+      wx.setStorage({
+        key: 'rightScore',
+        data: this.data.rightScore
+      })
     }
   },
 
@@ -117,12 +139,20 @@ Page({
     this.setData({
       leftScore: 0
     })
+    wx.setStorage({
+      key: 'leftScore',
+      data: this.data.leftScore
+    })
   },
   resetRightButtonClick: function(event) {
     // console.log(event);
     var score = event.target.dataset.text;
     this.setData({
       rightScore: 0
+    })
+    wx.setStorage({
+      key: 'rightScore',
+      data: this.data.rightScore
     })
   },
   onRoundOver: function() {
@@ -304,6 +334,30 @@ Page({
       teamNameB: '',
       No: 0
     })
+    wx.setStorage({
+      key: 'leftBigScore',
+      data: this.data.leftBigScore
+    })
+    wx.setStorage({
+      key: 'leftScore',
+      data: this.data.leftScore
+    })
+    wx.setStorage({
+      key: 'rightScore',
+      data: this.data.rightScore
+    })
+    wx.setStorage({
+      key: 'rightBigScore',
+      data: this.data.rightBigScore
+    })
+    wx.setStorage({
+      key: 'teamNameA',
+      data: this.data.teamNameA
+    })
+    wx.setStorage({
+      key: 'teamNameB',
+      data: this.data.teamNameB
+    })
   },
   onMatchAnnal: function() {
     wx.navigateTo({
@@ -338,6 +392,54 @@ Page({
     that.setData({
       id: id
     })
+    wx.getStorage({
+      key: 'teamNameA',
+      success(res) {
+        that.setData({
+          teamNameA: res.data
+        });
+      }
+    });
+    wx.getStorage({
+      key: 'teamNameB',
+      success(res) {
+        that.setData({
+          teamNameB: res.data
+        });
+      }
+    });
+    wx.getStorage({
+      key: 'leftBigScore',
+      success(res) {
+        that.setData({
+          leftBigScore: res.data
+        });
+      }
+    });
+    wx.getStorage({
+      key: 'rightBigScore',
+      success(res) {
+        that.setData({
+          rightBigScore: res.data
+        });
+      }
+    });
+    wx.getStorage({
+      key: 'leftScore',
+      success(res) {
+        that.setData({
+          leftScore: res.data
+        });
+      }
+    });
+    wx.getStorage({
+      key: 'rightScore',
+      success(res) {
+        that.setData({
+          rightScore: res.data
+        });
+      }
+    });
   },
 
   /**

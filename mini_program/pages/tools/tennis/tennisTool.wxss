@@ -1,1 +1,231 @@
-/* pages/tools/tennis/tennisTool.wxss */
+/* pages/tools/pingpong/pingpongTool.wxss */
+@import "../../../templates/littlescore/littlescore.wxss";
+
+/* .reduce{
+  margin-left: 50%;
+  margin-top: 50%;
+  
+} */
+
+.content-group {
+  background: linear-gradient(to right, #e73e3c 0%, #e73e3c 50%, #6a64f6 51%, #6a64f6 100%);
+  height: 1500rpx;
+}
+
+.section {
+  display: flex;
+  justify-content: space-around;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.section input {
+  height: 80rpx;
+}
+
+.VS {
+  line-height: 80rpx;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.section-left {
+  background-color: #fefefe;
+  border: 1px solid gray;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.section-right {
+  border: 1px solid gray;
+  background-color: #fefefe;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.section__title {
+  width: 50%;
+}
+
+.game_score {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40rpx;
+}
+
+.game_score .score {
+  background-color: whitesmoke;
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.big_score {
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.big_score .score {
+  margin: 20rpx;
+  height: 80rpx;
+  width: 80rpx;
+  background-color: #fff;
+  color: black;
+  text-align: center;
+  line-height: 80rpx;
+  border: 1px solid gray;
+}
+
+.big_score .score-left {
+  border-color: gray;
+  border-style: solid;
+  border-width: 1px 0 1px 1px;
+}
+
+.little-score {
+  display: flex;
+  justify-content: space-around;
+}
+
+.little-score .score {
+  height: 280rpx;
+  width: 280rpx;
+  background-color: black;
+  text-align: center;
+}
+
+.little-score .scoretext {
+  font-size: 100px;
+  color: white;
+  height: 280rpx;
+  width: 280rpx;
+  line-height: 280rpx;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.left-group {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.right-group {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.inputTeam {
+  display: block;
+}
+
+.botton-group {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40rpx;
+}
+
+.botton-group .button-item{
+  width: 200rpx;
+  margin-top: 40rpx;
+}
+
+.scoreview {
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  padding: 0 0 0 0;
+  width: 280rpx;
+}
+
+.scoretext {
+  font-size: 100px;
+  background-color: black;
+  color: white;
+  height: 280rpx;
+  /* width: 100%;
+  height: width; */
+  text-align: center;
+  line-height: 280rpx;
+}
+
+.cover-view {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 280rpx;
+  height: 280rpx;
+}
+
+.cover-up {
+  height: 140rpx;
+}
+
+.cover-down {
+  height: 140rpx;
+}
+
+.scoreAddAndReduce {
+  flex-direction: row;
+  display: flex;
+  /* width: 300rpx; */
+  height: 90rpx;
+  margin-top: 20rpx;
+}
+
+.add {
+  background-color: black;
+  color: white;
+  padding: 0;
+  width: 130rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 0;
+  margin-left: 0rpx;
+  font-size: 30px;
+}
+
+.reduce {
+  background-color: black;
+  color: white;
+  width: 130rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 30px;
+  margin-left: 40rpx;
+  margin-right: 0rpx;
+  border-radius: 0;
+}
+
+.reset {
+  background-color: black;
+  color: white;
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+  border-radius: 0; /* 去除边框 */
+}
+
+/* 去除按钮边框 */
+
+.add::after {
+  border: none;
+}
+
+.reduce::after {
+  border: none;
+}
+
+.reset::after {
+  border: none;
+}

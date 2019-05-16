@@ -1,10 +1,27 @@
-<!-- <button bindtap = 'onInsert'>添加</button>
-<view>{{csid}}{{test}}</view>
-<button bindtap = 'onQuery'>查询</button>
-<view wx:for="{{data}}" wx:key='{{item._id}}'>{{item._id}}{{item.test}}</view>
-<button bindtap = 'onUpdate'>修改</button>
-<button bindtap = 'onRemove'>删除</button> -->
+<view>
 
-<button bindtap='onUploadFile' class='uploadFile'>上传图片</button>
+  <navigator class="footballMatch" url='matchDetails/footballMatch/footballMatch?type=football&id=0'>
+    <image class="pic" mode="scaletofill" src='https://www.xianwangliu.cn/miniProgram/images/Goal.png'></image>
+    <view class="title">2019杭电男足分院杯</view>
+  </navigator>
+  <navigator class="footballMatch" url='matchDetails/footballMatch/footballMatch?type=football&id=1'>
+    <image class="pic" mode="scaletofill" src='https://www.xianwangliu.cn/miniProgram/images/Goal.png'></image>
+    <view class="title">2019杭州电子科技大学足球超级联赛</view>
+  </navigator>
+  <navigator class="footballMatch" url='matchDetails/footballMatch/footballMatch?type=football&id=2'>
+    <image class="pic" mode="scaletofill" src='https://www.xianwangliu.cn/miniProgram/images/Goal.png'></image>
+    <view class="title">2019杭电女足分院杯</view>
+  </navigator>
+  <navigator class="footballMatch" url='matchDetails/footballMatch/footballMatch?type=basketball&id=0'>
+    <image class="pic" mode="scaletofill" src='https://www.xianwangliu.cn/miniProgram/images/basketball.png'></image>
+    <view class="title">2019杭电篮球分院杯</view>
+  </navigator>
+  <!-- <view class="footballMatch" bindtap='onTapMatch'data-type='basketball'>
+    <image class="pic" mode="scaletofill" src='https://www.xianwangliu.cn/miniProgram/images/basketball.png'></image>
+    <view class="title">2019杭州电子科技大学机械学院篮球精英赛</view>
+  </view> -->
+  
+</view>
 
-<button bindtap='onAdd'>云函数加法</button>
+<view class="add" bindtap="openchoose" hidden="{{chooseBtn}}">十</view>
+<view class="add" bindtap="closechoose" hidden="{{!chooseBtn}}" style='background-color:orangered'>X</view>

@@ -14,93 +14,98 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    
-    
-      
+  onLoad: function(options) {
+
   },
 
-  seeDetails: function(event){
+  seeDetails: function(event) {
     console.log(event);
     var that = this;
     var url = event.currentTarget.dataset.url;
     wx.navigateTo({
-      url: '../newsDetail/newsDetail?url='+url,
+      url: '../newsDetail/newsDetail?url=' + url,
     })
-    
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
     var that = this;
     network.getNewsPage({
-      success: function (data) {
+      success: function(res) {
+        // console.log(res)
         that.setData({
-          data: data
+          data: res
         });
       },
-      fail: function () {
+      fail: function() {
         that.setData({
           isHave: false
         })
       }
     });
+    
+    console.log(that)
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-    wx.startPullDownRefresh()
+  onPullDownRefresh: function() {
+    // wx.startPullDownRefresh()
     var that = this;
     network.getNewsPage({
-      success: function (data) {
+      success: function(res) {
+        wx.stopPullDownRefresh()
+        // console.log(res)
         that.setData({
-          data: data
+          reason: res
         });
       },
-      fail: function () {
+      fail: function() {
         that.setData({
           isHave: false
         })
       }
     });
+    wx.stopPullDownRefresh()
+    // console.log(that)
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

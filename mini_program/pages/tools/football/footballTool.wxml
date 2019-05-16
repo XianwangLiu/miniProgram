@@ -1,14 +1,48 @@
 <!--pages/tools/football/footballTool.wxml-->
 
 <view class='content'>
-  <view class='title-group'>
-    <view class="section">
-      <view class='section-left'>
-        <input placeholder-style="color:#e73e3c" placeholder="请输入红色方" focus="{{focus}}" bindinput="getRedTeam" value="{{teamNameA}}" />
+  <view class="body-view">
+    <picker bindchange="bindChooseMatch" value="{{matchIndex}}" range="{{matchLists}}">
+      <view class="picker"  hidden='{{!isMatch}}'>
+        赛事：{{matchLists[matchIndex]}}
       </view>
-      <view class='VS'>VS</view>
-      <view class='section-right'>
-        <input placeholder-style="color:#6a64f6" placeholder="请输入蓝色方" focus="{{focus}}" bindinput="getBlueTeam" value="{{teamNameB}}" />
+    </picker>
+    <view>
+       赛事模式<switch type='checkbox' checked="{{isMatch}}" bindchange="switchChange" />
+    </view>
+   
+  </view>
+  <view wx:if='{{!isMatch}}'>
+    <view class='title-group'>
+      <view class="section">
+        <view class='section-left'>
+          <input placeholder-style="color:#e73e3c" placeholder="请输入红色方" focus="{{focus}}" bindinput="getRedTeam" value="{{teamNameA}}" />
+        </view>
+        <view class='VS'>VS</view>
+        <view class='section-right'>
+          <input placeholder-style="color:#6a64f6" placeholder="请输入蓝色方" focus="{{focus}}" bindinput="getBlueTeam" value="{{teamNameB}}" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class='title-group2'>
+      <view class="section">
+        <view class='section-left'>
+          <picker bindchange="bindPickerChangeTeamA" value="{{teamIndexA}}" range="{{teams}}">
+            <view class="picker">
+              {{teams[teamIndexA]}}
+            </view>
+          </picker>
+        </view>
+        <view class='VS'>VS</view>
+        <view class='section-right'>
+          <picker bindchange="bindPickerChangeTeamB" value="{{teamIndexB}}" range="{{teams}}">
+            <view class="picker">
+              {{teams[teamIndexB]}}
+            </view>
+          </picker>
+        </view>
       </view>
     </view>
   </view>
@@ -56,6 +90,7 @@
   </view>
 
   <view style='text-align: center;'>时间轴</view>
+  <view style='text-align: center;'>|</view>
   <view wx:for='{{process}}' wx:key='{{item.id}}' class='data-module'>
     <view wx:if='{{item.isRed}}' class='module-left'>
       <view class='item-left'>{{item.id}} {{item.type}}

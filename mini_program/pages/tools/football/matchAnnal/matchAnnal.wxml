@@ -1,7 +1,14 @@
-<view wx:for='{{data}}' class='content'>
+<view wx:for='{{data}}' wx:key='{{item}}' class='content'>
   <view class='title-item'>
-    <view>
-      {{item.teamNameA}} {{item.bigScoreA}} : {{item.bigScoreB}} {{item.teamNameB}}
+    <view wx:if='{{!item.isMatch}}'>
+      <view>
+        {{item.teamNameA}} {{item.bigScoreA}} : {{item.bigScoreB}} {{item.teamNameB}}
+      </view>
+    </view>
+    <view wx:else>
+      <view>
+        {{item.teamMatchNameA}} {{item.bigScoreA}} : {{item.bigScoreB}} {{item.teamMatchNameB}}
+      </view>
     </view>
     <text>{{item.time}}</text>
   </view>

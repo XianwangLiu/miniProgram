@@ -1,0 +1,11 @@
+<view class='content'>
+
+  <navigator class='team-list' url='register/register?id={{matchId}}&type={{type}}'>
+    <image class="pic" mode="scaletofill" src='https://www.xianwangliu.cn/miniProgram/images/footballTeams.png'></image>
+    <view class="title">球队列表，注册球员</view>
+  </navigator>
+  <view class='schedule' bindtap='onSchedule'>
+    <image class="pic" mode="scaletofill" src='https://www.xianwangliu.cn/miniProgram/images/schedule.png'></image>
+    <view class="title">赛程</view>
+  </view>
+</view>

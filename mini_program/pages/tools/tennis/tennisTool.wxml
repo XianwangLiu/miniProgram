@@ -1,1 +1,71 @@
-<text>页面开发中</text>
+<!-- <import src='../../../templates/littlescore/littlescore.wxml'/> -->
+<view class='content-group'>
+  <view class="section">
+    <view class='section-left'>
+      <!-- <view class="section__title">队名A：{{inputValue}}</view> -->
+      <input placeholder="请输入红色方" focus="{{focus}}" bindinput="getRedTeam" value="{{teamNameA}}" />
+    </view>
+    <view class='VS'>VS</view>
+    <view class='section-right'>
+      <!-- <view class="section__title">队名B：{{inputValue}}</view> -->
+      <input placeholder="请输入蓝色方" focus="{{focus}}" bindinput="getBlueTeam" value="{{teamNameB}}" />
+    </view>
+  </view>
+  <view class='game_score'>
+    <view class='game_score-left score' style='color:#e73e3c;'>{{leftGameScore}}</view>
+    <view style='color:white;'>盘比分</view>
+    <view class='game_score-right score' style='color:#6a64f6;'>{{rightGameScore}}</view>
+  </view>
+  <view class='big_score'>
+    <view class='score-left score' style='color:#e73e3c;'>{{leftBigScore}}</view>
+    <view style='color:white;'>局比分</view>
+    <view class='score-right score'  style='color:#6a64f6;'>{{rightBigScore}}</view>
+  </view>
+  <view class='little-score'>
+    <view class='score'>
+      <text class='scoretext'>{{leftScore}}</text>
+    </view>
+    <view class='score'>
+      <text class='scoretext'>{{rightScore}}</text>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='left-group'>
+      <!-- <template is="scoreTemplate" class='template' data="{{score,isLeft}}"></template> -->
+      <view class='scoreview'>
+        <!-- <text class='scoretext'>{{score}}</text> -->
+        <view class='cover-view'>
+          <text class='cover-up' hidden='{{false}}' catchtap='addButtonClick' data-type='{{isLeft}}'></text>
+          <text class='cover-down' hidden='{{false}}' bindtap='reduceButtonClick' data-text='{{score}}' data-type='{{isLeft}}'></text>
+        </view>
+        <view class='scoreAddAndReduce'>
+          <button class='add' bindtap='addLeftButtonClick' data-text='{{leftScore}}' data-type='{{isLeft}}'>+</button>
+          <button class='reduce' bindtap='reduceLeftButtonClick' data-text='{{leftScore}}' data-type='{{isLeft}}'>-</button>
+        </view>
+        <button class='reset' bindtap='resetLeftButtonClick' data-type='{{isLeft}}'>重置分数</button>
+      </view>
+    </view>
+    <view class='right-group'>
+      <!-- <template is="scoreTemplate" class='template' data="{{score,isLeft:false}}"></template> -->
+      <view class='scoreview'>
+        <!-- <text class='scoretext'>{{score}}</text> -->
+        <!-- <view class='cover-view'>
+          <text class='cover-up' hidden='{{false}}' catchtap='addButtonClick' data-type='{{isLeft}}'></text>
+          <text class='cover-down' hidden='{{false}}' bindtap='reduceButtonClick' data-text='{{score}}' data-type='{{isLeft}}'></text>
+        </view> -->
+        <view class='scoreAddAndReduce'>
+          <button class='add' bindtap='addRightButtonClick' data-text='{{rightScore}}' data-type='{{isLeft}}'>+</button>
+          <button class='reduce' bindtap='reduceRightButtonClick' data-text='{{rightScore}}' data-type='{{isLeft}}'>-</button>
+        </view>
+        <button class='reset' bindtap='resetRightButtonClick' data-type='{{isLeft}}'>重置分数</button>
+      </view>
+    </view>
+  </view>
+  <view class='botton-group'>
+    <button type="primary" size="mini" class='button-item' loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="onRoundOver" hover-class="other-button-hover">局结束</button>
+    <button type="primary" size="mini" class='button-item' bindtap='onPartOver'>盘结束</button>
+    <button type="primary" size="mini" class='button-item' bindtap='onGameOver'>比赛结束</button>
+    <button type="primary" size="mini" class='button-item' bindtap='onMatchAnnal'>比赛记录</button>
+    <button type="primary" size="mini" class='button-item' bindtap='onRegame'>重新开始</button>
+  </view>
+</view>

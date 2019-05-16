@@ -6,7 +6,31 @@
   padding: 20rpx;
 }
 
+.body-view {
+  line-height: 60rpx;
+  height: 60rpx;
+  right: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  color: #41be57;
+}
+.body-view .picker{
+  width: 450rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .title-group .section {
+  display: flex;
+  justify-content: space-around;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.title-group2 .section {
   display: flex;
   justify-content: space-around;
   font-size: 30rpx;
@@ -19,6 +43,12 @@
 
 .VS {
   line-height: 80rpx;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.title-group2 .VS {
+  line-height: 120rpx;
   margin-left: 5px;
   text-align: center;
 }
@@ -50,14 +80,16 @@
   text-align: center;
   line-height: 80rpx;
 }
+
 .big_score .score-left {
   background-color: #e73e3c;
 }
+
 .big_score .score-right {
   background-color: #6a64f6;
 }
 
-.time-group{
+.time-group {
   text-align: center;
 }
 
@@ -69,7 +101,12 @@
   font-size: 28rpx;
 }
 
-.teamCollection .nameList {
+.teamCollection .redTeam {
+  color: #e73e3c;
+}
+
+.teamCollection .blueTeam {
+  color: #6a64f6;
 }
 
 .picker {
@@ -81,7 +118,8 @@
   flex-direction: column;
   justify-content: space-around;
 }
-.data-module text{
+
+.data-module text {
   font-size: 24rpx;
   color: #aaa;
 }
@@ -127,13 +165,14 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   /* position: fixed; */
   bottom: 80rpx;
   width: 100%;
-  margin-bottom:40rpx;
+  margin-bottom: 40rpx;
 }
-.button-group .button-item{
+
+.button-group .button-item {
   width: 200rpx;
   margin: 10rpx;
 }

@@ -121,8 +121,8 @@
       <picker bindchange="bindareaChange" value="{{area_index}}" range="{{area}}">
         <view class="pickarea">{{area[area_index]}}</view>
       </picker>
-      <picker value="{{achool_index}}" range="{{school}}" bindchange="bindschoolChange">
-        <view class="pickarea">{{school[school_index]}}</view>
+      <picker value="{{achool_index}}" range="{{teams}}" bindchange="bindschoolChange">
+        <view class="pickarea">{{teams[school_index]}}</view>
       </picker>
       <view class="tablename">身高(cm)</view>
       <view class="body-view">

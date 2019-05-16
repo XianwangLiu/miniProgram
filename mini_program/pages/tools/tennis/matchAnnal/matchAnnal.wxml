@@ -1,0 +1,14 @@
+<view class='content'>
+  <view wx:for='{{data}}' wx:key='{{item._id}}' class='component'>
+    <view wx:if='{{!item.hasWinner}}' class='component-item'>
+      <view class='component-id'>
+        <text class='item-red'>{{item.leftBigScore}}</text>
+        <text class='item-blue'>{{item.rightBigScore}}</text>
+      </view>
+    </view>
+    <view wx:if='{{item.hasWinner}}' class='title-item'>
+      <text class='component-text'>{{item.winner}}胜,时间：{{item.time}}</text>
+      <view class='bigScore'>{{item.teamNameA}} {{item.leftGameScore}}:{{item.rightGameScore}} {{item.teamNameB}}</view>
+    </view>
+  </view>
+</view>

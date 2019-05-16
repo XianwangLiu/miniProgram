@@ -7,6 +7,9 @@ Page({
   data: {
     teamNameA: '',
     teamNameB: '',
+    isMatch: false,
+    teamMatchNameA: '',
+    teamMatchNameB: '',
     bigScoreA: '',
     bigScoreB: '',
     process: [],

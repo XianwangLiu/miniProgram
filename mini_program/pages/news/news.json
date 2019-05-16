@@ -1,3 +1,5 @@
 {
-  "navigationBarTitleText": "全球体育"
+  "navigationBarTitleText": "全球体育",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
 }

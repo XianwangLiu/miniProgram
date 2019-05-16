@@ -1,13 +1,17 @@
 {
   "pages": [
     "pages/tools/tools",
+    "pages/tools/tennis/tennisTool",
     "pages/tools/football/footballTool",
+    "pages/match/match",
+    "pages/match/matchDetails/footballMatch/footballMatch",
+    "pages/match/matchDetails/footballMatch/register/register",
+    "pages/match/matchDetails/footballMatch/schedule/schedule",
+    "pages/user/MyCard/MyCard",
     "pages/tools/pingpong/matchAnnal/matchAnnal",
     "pages/tools/pingpong/pingpongTool",
-    "pages/match/match",
     "pages/user/user",
     "pages/user/MyLike/MyLike",
-    "pages/user/MyCard/MyCard",
     "pages/user/SignAll/SignAll",
     "pages/user/Setting/Setting",
     "pages/index/index",
@@ -15,9 +19,9 @@
     "pages/newsDetail/newsDetail",
     "pages/tools/basketball/basketballTool",
     "pages/tools/volleyball/volleyballTool",
-    "pages/tools/tennis/tennisTool",
-    "pages/match/matchDetails/matchDetails",
-    "pages/tools/football/matchAnnal/matchAnnal"
+    "pages/tools/football/matchAnnal/matchAnnal",
+    "pages/match/matchDetails/basketballMatch/basketballMatch",
+    "pages/tools/tennis/matchAnnal/matchAnnal"
   ],
   "window": {
     "backgroundTextStyle": "light",
